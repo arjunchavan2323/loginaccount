@@ -1,0 +1,13 @@
+<div class="col-sm-6">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let pass of productArray"
+        [class.active]="slectedid===pass.id"
+        [routerLink]="['/products', pass.id]"
+        (click)="slectedid=pass.id"
+        [queryParams]="{canedit:pass.canReturn}">{{pass.pname}}</li>
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <router-outlet></router-outlet>
+</div>

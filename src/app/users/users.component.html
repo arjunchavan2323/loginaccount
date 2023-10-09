@@ -1,0 +1,17 @@
+<div class="col-sm-6">
+    <ul class="list-group">
+        <li class="list-group-item"
+        
+         *ngFor="let pass of userArray"
+          [class.active]="selectedid===pass.id"
+         [routerLink]="['/users', pass.id]" 
+         (click)="selectedid=pass.id"
+         [queryParams]="{canedit:pass.canReturn}">
+            {{pass.username}}
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-8">
+    <router-outlet></router-outlet>
+</div>

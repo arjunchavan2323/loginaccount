@@ -1,0 +1,15 @@
+
+    <div class="from-group">
+        <label for="pname">product name</label>
+        <input type="text" class="from-control" [disabled]="!canedit" [value]="productobect.pname" #pname>
+    </div>
+
+        <label for="pstatus">status</label>
+        <select name="" id=""  [value]="productobect.status" [disabled]="!canedit" #status>
+            <option value="inprogress">inprogress</option>
+            <option value="dicepatch">dicepatch</option>
+            <option value="deliver">deliver</option>
+        </select>
+
+
+<button class="btn btn-primary" (click)="gotoproduct(pname, status)">go to product</button>
